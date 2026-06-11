@@ -1,4 +1,8 @@
 import React from 'react'
+import users_icon from '../assets/users_icon.svg'
+import fuel_icon from '../assets/fuel_icon.svg'
+import car_icon from '../assets/car_icon.svg'
+import location_icon from '../assets/location_icon.svg'
 
 const CarCard = ({car}) => {
 
@@ -28,8 +32,21 @@ const CarCard = ({car}) => {
         
 
         <div className='mt-4 grid grid-cols-2 gap-y-2 text-gray-600'>
-            <div>
-              <img src={}/>
+            <div className='flex items-center text-sm text-muted-foreground'>
+              <img src={users_icon} alt="" className='h-4 mr-2'/>
+              <span>{car.seating_capacity} Seats</span>
+            </div>
+            <div className='flex items-center text-sm text-muted-foreground'>
+              <img src={fuel_icon} alt="" className='h-4 mr-2'/>
+              <span>{car.fuel_type} </span>
+            </div>
+            <div className='flex items-center text-sm text-muted-foreground'>
+              <img src={car_icon} alt="" className='h-4 mr-2'/>
+              <span>{car.transmission} </span>
+            </div>
+            <div className='flex items-center text-sm text-muted-foreground'>
+              <img src={location_icon} alt="" className='h-4 mr-2'/>
+              <span>{car.location} </span>
             </div>
         </div>
         </div>
